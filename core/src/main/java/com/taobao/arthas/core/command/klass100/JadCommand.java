@@ -105,7 +105,8 @@ public class JadCommand extends AnnotatedCommand {
         this.hideUnicode = hideUnicode;
     }
 
-    @Option(longName = "source-only", flag = true)
+    @Option(longName = "source-only"/*, flag = true*/)
+    @DefaultValue("true")
     @Description("Output source code only")
     public void setSourceOnly(boolean sourceOnly) {
         this.sourceOnly = sourceOnly;
